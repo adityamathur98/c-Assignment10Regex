@@ -1,0 +1,180 @@
+Q1. Create an array of integers with a size specified by the user.
+
+Ans. #include <iostream>
+using namespace std;
+
+int main()
+{
+    int arraySize;
+    cout << "Enter the Size of Array : ";
+    cin >> arraySize;
+
+    int arr[arraySize];
+
+    // Loop to get Input for array Element
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << "Enter The Element " << i + 1 << " : ";
+        cin >> arr[i];
+    }
+
+    cout << "Array : {";
+
+    // Loop to print array
+    for (int i = 0; i < arraySize; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    cout << "}";
+
+    return 0;
+}
+
+Q2. Initialize the array with random integers.
+
+Ans. #include <iostream>
+using namespace std;
+
+int main()
+{
+    int randomInt;
+    cout << "Enter Any Ineger Value: ";
+    cin >> randomInt;
+
+    int arr[] = {randomInt};
+
+    cout << arr[0];
+    return 0;
+}
+
+Q3. Create a 2x2 matrix and a 2x2 matrix with user-defined values.
+
+Ans. #include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Create 2X2 Array \n";
+    int arr[2][2];
+
+    // Loop to get input from user fot array element
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            cout << "Enter Element " << j + 1 << " : ";
+            cin >> arr[i][j];
+        }
+    }
+
+    // Loop to Print Array
+    cout << "Array: {";
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            cout << arr[i][j] << " ";	
+        }
+    }
+
+    cout << "}";
+    return 0;
+}
+
+Q4. Implement and use a function to add two matrices.
+
+Ans. #include <iostream>
+using namespace std;
+
+void addMatrix(int arr1[], int arr2[])
+{
+    cout << "Array: {";
+    for (int i = 0; i < 3; i++)
+    {
+        cout << arr1[i] + arr2[i] << " ";
+    }
+
+    cout << "}";
+}
+
+int main()
+{
+    int arr1[] = {1, 2, 3};
+    int arr2[] = {4, 5, 6};
+
+    addMatrix(arr1, arr2);
+    return 0;
+}
+
+Q5. Implement and use a function to multiply two matrices.
+
+Ans. #include <iostream>
+using namespace std;
+
+void printMultipliedArray(int arr1[], int arr2[])
+{
+    cout << "Multipiled Array is : {";
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << arr1[i] * arr2[i] << ",";
+    }
+
+    cout << "}";
+}
+
+int main()
+{
+    int arr1[] = {7, 8, 9, 10};
+    int arr2[] = {12, 13, 14, 15};
+
+    printMultipliedArray(arr1, arr2);
+    return 0;
+}
+
+Q6. Print the resulting matrices after addition and multiplication.
+
+Ans. #include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr1[] = {1, 2, 3};
+    int arr2[] = {4, 5, 6};
+
+    int addedMatrix[3], multipliedArray[3];
+
+    // Loop to add two arrays
+    for (int i = 0; i < 3; i++)
+    {
+        addedMatrix[i] = arr1[i] + arr2[i];
+    }
+
+    // Loop to multiply Two Arrays
+    for (int i = 0; i < 3; i++)
+    {
+        multipliedArray[i] = arr1[i] * arr2[i];
+    }
+
+    cout << "Added Array is: {";
+
+    // Loop to print Added Array
+    for (int i = 0; i < 3; i++)
+    {
+        cout << addedMatrix[i] << ",";
+    }
+    cout << "}\n";
+
+    cout << "Multiplied Array is: {";
+
+    // Loop to print Multiplied Array
+    for (int i = 0; i < 3; i++)
+    {
+        cout << multipliedArray[i] << ",";
+    }
+    cout << "}";
+
+    return 0;
+}
